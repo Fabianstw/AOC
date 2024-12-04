@@ -1,13 +1,5 @@
 import re
 
-# to high:
-# 161085926
-# 83950340
-
-# too low:
-# 71795980
-# 50767730
-
 pattern = r"mul\(\d{1,3},\d{1,3}\)"
 
 longLine = ""
