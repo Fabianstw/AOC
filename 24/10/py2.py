@@ -18,7 +18,6 @@ def findZeros(mat):
 
 
 def runBFS(mat, start):
-	visited = set()
 	queue = [(start[0], start[1], 0)]
 	highPoints = 0
 	while queue:
@@ -28,7 +27,7 @@ def runBFS(mat, start):
 			continue
 		for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:  # Four possible directions
 			nx, ny = x + dx, y + dy
-			if 0 <= nx < len(mat) and 0 <= ny < len(mat[0]) and (nx, ny, r+1) not in visited:
+			if 0 <= nx < len(mat) and 0 <= ny < len(mat[0]) and (nx, ny, r+1):
 				if mat[nx][ny] == r + 1:
 					queue.append((nx, ny, r+1))
 	return highPoints
