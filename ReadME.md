@@ -1,9 +1,9 @@
 # My solutions for AOC
 
-Not really clean code :D but it works.
+Not spotless code :D but it works.
 
 
-### Years
+## Years
 - [ ] 2024 (_Python_)
 - [ ] 2023 (_Julia_)
 - [ ] 2022
@@ -16,6 +16,11 @@ Not really clean code :D but it works.
 - [ ] 2015
 
 
-### Timeline
+## Timeline
 I began solving the **Advent of Code** challenge in 2024. 
 After that, even though not during Advent, I started solving the challenges from previous years.
+
+
+## Programming languages install links
+- [Python](https://www.python.org/downloads/)
+- [Julia](https://julialang.org/downloads/)
