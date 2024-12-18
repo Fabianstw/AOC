@@ -1,6 +1,3 @@
-import copy
-
-
 def readInput():
 	register = {}
 	program = []
