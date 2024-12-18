@@ -4,8 +4,8 @@ Not really clean code :D but it works.
 
 
 ### Years
-- [x] 2024 (_Python_)
-- [ ] 2023
+- [ ] 2024 (_Python_)
+- [ ] 2023 (_Julia_)
 - [ ] 2022
 - [ ] 2021
 - [ ] 2020
