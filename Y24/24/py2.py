@@ -19,3 +19,6 @@ if __name__ == '__main__':
 		print(f'{v2} -> {v1}_{op}_{v2};')
 		print(f'{v1}_{op}_{v2} -> {v3};')
 	print(f'}}')
+	
+	swaps = sorted(['qwf', 'cnk', 'mps', 'z27', 'z14', 'vhm', 'msq', 'z39'])
+	print(f'{",".join(swaps)}')
