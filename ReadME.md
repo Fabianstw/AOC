@@ -4,7 +4,7 @@ Not spotless code :D but it works.
 
 
 ## Years
-- [ ] 2024 (_Python_)
+- [x] 2024 (_Python_)
 - [ ] 2023 (_Julia_) **Status 20.12: Postponed, as I want to do year 21 in Rust first**
 - [ ] 2022
 - [ ] 2021 (_Rust_)
