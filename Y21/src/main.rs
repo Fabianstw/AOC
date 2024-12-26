@@ -5,9 +5,10 @@ mod d4;
 mod d5;
 mod d6;
 mod d7;
+mod d8;
 
 fn main() {
-  const DAY: i8 = 7;
+  const DAY: i8 = 8;
   if DAY == 1 {
     d1::d1p1::solve();
     d1::d1p2::solve();
@@ -27,5 +28,8 @@ fn main() {
     d6::d6p1::solve();
   } else if DAY == 7 {
     d7::d7p1::solve();
+  } else if DAY == 8 {
+    d8::d8p1::solve();
+    d8::d8p2::solve();
   }
 }
