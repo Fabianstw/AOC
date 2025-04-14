@@ -1,5 +1,4 @@
 //
-// Copyright 2025 Fabian Stiewe
 //
 
 #include "D3/sol3.h"
