@@ -18,7 +18,7 @@ echo ""
 # Running cpplint
 echo "🧼 Running cpplint..."
 # shellcheck disable=SC2038
-find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs cpplint --linelength=119
+find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs cpplint --linelength=80
 
 echo ""
 

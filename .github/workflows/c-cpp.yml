@@ -13,6 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install cpplint
+        run: pip install cpplint
+
+      - name: Run cpplint
+        run: |
+          echo "🧼 Running cpplint..."
+          # shellcheck disable=SC2038
+          find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs cpplint --linelength=80
+
       - name: Configure project with CMake
         run: |
           cd Y22
@@ -25,7 +34,7 @@ jobs:
           cd Y22/build
           make
 
-      - name: Run tests (if using CTest)
+      - name: Run tests with Google Test
         run: |
-          cd Y22/src
-          ctest --output-on-failure
+          cd Y22/build
+          ./test-runner
