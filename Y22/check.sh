@@ -7,7 +7,7 @@ cmake -S . -B cmake-build-debug > /dev/null 2>&1  # Suppress regular output
 # Formatting code with clang-format
 echo "🔧 Formatting code with clang-format..."
 # shellcheck disable=SC2038
-find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs clang-format -i -v  # Show processing files
+find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs clang-format -i  # Show processing files
 
 echo ""
 

@@ -10,9 +10,10 @@ add_executable(main
         src/main.cpp
         src/D1/sol1.cpp
         src/D2/sol2.cpp
-)
+        src/D3/sol3.cpp
 
-configure_file(src/D1/inp.txt inp.txt COPYONLY)
+        src/utils/utils.cpp
+)
 
 include(FetchContent)
 
