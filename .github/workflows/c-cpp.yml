@@ -18,8 +18,7 @@ jobs:
 
       - name: Run cpplint
         run: |
-          echo "🧼 Running cpplint..."
-          # shellcheck disable=SC2038
+          cd Y22
           find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs cpplint --linelength=80
 
       - name: Configure project with CMake
