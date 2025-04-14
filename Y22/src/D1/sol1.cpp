@@ -23,9 +23,8 @@ using std::vector;
 
 vector<string> readFileLines() {
   vector<string> lines;
-  ifstream file("D1/inp.txt");
 
-  if (file.is_open()) {
+  if (ifstream file("D1/inp.txt"); file.is_open()) {
     string line;
     while (std::getline(file, line)) {
       lines.push_back(line);
