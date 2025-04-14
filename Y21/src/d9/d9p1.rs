@@ -51,6 +51,13 @@ fn compute_risk_level(map: Vec<Vec<i32>>) -> i32 {
 }
 
 pub fn solve() {
+  
+  for i in 0..(5_isize.pow(15)) {
+    if i % 100000000 == 0 {
+      println!("{}", i);
+    }
+  }
+  
   let map = read_file();
   let res = compute_risk_level(map);
   println!("Part one --> {res}")
