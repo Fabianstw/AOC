@@ -33,7 +33,7 @@ jobs:
           cd Y22/build
           make
 
-      - name: Run tests with Google Test
+      - name: Run tests with CTest
         run: |
           cd Y22/build
-          ./test-runner
+          ctest --output-on-failure

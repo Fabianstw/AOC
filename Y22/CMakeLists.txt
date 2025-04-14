@@ -39,3 +39,5 @@ target_link_libraries(test_runner gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(test_runner)
+
+set_tests_properties(test_runner PROPERTIES WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/Y22/src")
