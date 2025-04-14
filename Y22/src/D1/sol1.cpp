@@ -1,8 +1,25 @@
+//
+// Copyright 2025 Fabian Stiewe
+//
+
+#include "D1/sol1.h"
+
 #include <algorithm>
 #include <fstream>
+#include <functional>
 #include <iostream>
+#include <string>
+#include <vector>
 
-using namespace std;
+using std::cerr;
+using std::cout;
+using std::endl;
+using std::greater;
+using std::ifstream;
+using std::sort;
+using std::stoi;
+using std::string;
+using std::vector;
 
 vector<string> readFileLines() {
   vector<string> lines;
@@ -15,7 +32,7 @@ vector<string> readFileLines() {
     }
     file.close();
   } else {
-    std::cerr << "Unable to open file: " << std::endl;
+    std::cerr << "Unable to open file" << std::endl;
   }
 
   return lines;
@@ -55,7 +72,8 @@ int top_three_calories(const vector<string>& elves) {
 }
 
 void solve() {
-  vector<string> lines = readFileLines();
+  const vector<string> lines = readFileLines();
+  cout << "Day 1 solutions:" << endl;
   cout << get_most_calories(lines) << endl;
   cout << top_three_calories(lines) << endl;
 }

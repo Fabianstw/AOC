@@ -1,2 +1,4 @@
 .idea
 main
+build
+cmake-build-debug
