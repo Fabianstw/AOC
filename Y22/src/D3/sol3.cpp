@@ -4,6 +4,7 @@
 
 #include "D3/sol3.h"
 
+#include <algorithm>
 #include <cctype>
 #include <iostream>
 #include <set>

@@ -4,6 +4,10 @@
 echo "🔁 Reconfiguring CMake..."
 cmake -S . -B cmake-build-debug > /dev/null 2>&1  # Suppress regular output
 
+# Build the project
+echo "🔨 Building the project..."
+cmake --build cmake-build-debug > /dev/null 2>&1  # Suppress regular output
+
 # Formatting code with clang-format
 echo "🔧 Formatting code with clang-format..."
 # shellcheck disable=SC2038
