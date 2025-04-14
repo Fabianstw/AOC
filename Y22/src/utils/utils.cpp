@@ -10,7 +10,8 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> split_string(const std::string& str, const std::string& delimiter) {
+std::vector<std::string> split_string(const std::string& str,
+                                      const std::string& delimiter) {
   std::vector<std::string> tokens;
 
   if (delimiter.empty()) {
@@ -29,7 +30,7 @@ std::vector<std::string> split_string(const std::string& str, const std::string&
   return tokens;
 }
 
-std::vector<std::string> readFile(const std::string& filename) {
+std::vector<std::string> read_file(const std::string& filename) {
   std::vector<std::string> lines;
 
   if (std::ifstream file(filename); file.is_open()) {

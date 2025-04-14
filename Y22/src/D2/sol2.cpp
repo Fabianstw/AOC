@@ -45,7 +45,8 @@ std::vector<std::string> split(const std::string& str, char delimiter) {
   return tokens;
 }
 
-std::map<std::string, std::string> mapping = {{"A", "X"}, {"B", "Y"}, {"C", "Z"}};
+std::map<std::string, std::string> mapping = {
+    {"A", "X"}, {"B", "Y"}, {"C", "Z"}};
 std::map<std::string, int> scores = {{"X", 1}, {"Y", 2}, {"Z", 3}};
 std::map<std::string, int> game_scores = {
     {"AX", 3}, {"AY", 6}, {"AZ", 0}, {"BX", 0}, {"BY", 3},
@@ -67,8 +68,10 @@ int total_score(const vector<string>& lines) {
 int total_score_changed_rules(const vector<string>& lines) {
   int total_score = 0;
 
-  std::map<std::string, std::string> win_map = {{"A", "Y"}, {"B", "Z"}, {"C", "X"}};
-  std::map<std::string, std::string> loose_map = {{"A", "Z"}, {"B", "X"}, {"C", "Y"}};
+  std::map<std::string, std::string> win_map = {
+      {"A", "Y"}, {"B", "Z"}, {"C", "X"}};
+  std::map<std::string, std::string> loose_map = {
+      {"A", "Z"}, {"B", "X"}, {"C", "Y"}};
 
   for (const auto& line : lines) {
     vector<string> line_parts = split(line, *" ");

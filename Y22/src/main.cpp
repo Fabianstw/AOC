@@ -7,6 +7,7 @@
 #include "D1/sol1.h"
 #include "D2/sol2.h"
 #include "D3/sol3.h"
+#include "D4/sol4.h"
 
 using std::cout;
 using std::endl;
@@ -19,5 +20,7 @@ int main() {
   solve_2();
   cout << "-----------:-)-----------" << endl;
   solve_3();
+  cout << "-----------:-)-----------" << endl;
+  solve_4();
   return 0;
 }

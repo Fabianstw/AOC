@@ -68,12 +68,15 @@ int count_badge_numbers(const vector<string>& lines) {
     std::set<std::string> intersection_12;
     std::set<std::string> intersection_123;
     // Compute intersection of part_1 and part_2
-    std::set_intersection(part_1.begin(), part_1.end(), part_2.begin(), part_2.end(),
-                          std::inserter(intersection_12, intersection_12.begin()));
+    std::set_intersection(
+        part_1.begin(), part_1.end(), part_2.begin(), part_2.end(),
+        std::inserter(intersection_12, intersection_12.begin()));
 
     // Compute intersection of the result with part_3
-    std::set_intersection(intersection_12.begin(), intersection_12.end(), part_3.begin(),
-                          part_3.end(), std::inserter(intersection_123, intersection_123.begin()));
+    std::set_intersection(
+        intersection_12.begin(), intersection_12.end(), part_3.begin(),
+        part_3.end(),
+        std::inserter(intersection_123, intersection_123.begin()));
 
     total_score += get_priority((*intersection_123.begin())[0]);
   }
@@ -84,7 +87,7 @@ int count_badge_numbers(const vector<string>& lines) {
 void solve_3() {
   cout << "Day 3 solutions: " << endl;
   std::string filename = "D3/inp.txt";
-  const vector<string> lines = readFile(filename);
+  const vector<string> lines = read_file(filename);
   cout << "Part A: " << count_false_order(lines) << endl;
   cout << "Part B: " << count_badge_numbers(lines) << endl;
 }
