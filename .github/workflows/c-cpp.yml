@@ -27,5 +27,5 @@ jobs:
 
       - name: Run tests (if using CTest)
         run: |
-          cd Y22/build
+          cd Y22/src
           ctest --output-on-failure
