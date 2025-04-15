@@ -12,6 +12,7 @@ add_executable(main
         src/D2/sol2.cpp
         src/D3/sol3.cpp
         src/D4/sol4.cpp
+        src/D5/sol5.cpp
 
         src/utils/utils.cpp
 )
