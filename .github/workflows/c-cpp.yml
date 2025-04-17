@@ -30,7 +30,7 @@ jobs:
           cd Y22
           mkdir -p build
           cd build
-          cmake ..
+          cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
       - name: Build with Make
         run: |
