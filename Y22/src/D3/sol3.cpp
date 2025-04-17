@@ -18,77 +18,76 @@ using std::endl;
 using std::string;
 using std::vector;
 
-int get_priority(char item) {
-  if (std::islower(item)) {
-    return item - 'a' + 1;
-  } else if (std::isupper(item)) {
-    return item - 'A' + 27;
-  } else {
-    return -1;
+int getPriority(const char ITEM) {
+  if (std::islower(ITEM)) {
+    return ITEM - 'a' + 1;
   }
+  if (std::isupper(ITEM)) {
+    return ITEM - 'A' + 27;
+  }
+  return -1;
 }
 
-int count_false_order(const vector<string>& lines) {
-  int total_score = 0;
+int countFalseOrder(const vector<string>& lines) {
+  int totalScore = 0;
 
   for (const auto& line : lines) {
     vector<string> parts = split_string(line, "");
     int mid = static_cast<int>(parts.size()) / 2;
-    std::set<std::string> seen_objects;
+    std::set<std::string> seenObjects;
     for (int i = 0; i < mid; i++) {
-      seen_objects.insert(parts[i]);
+      seenObjects.insert(parts[i]);
     }
     for (int i = mid; i < parts.size(); i++) {
-      if (seen_objects.find(parts[i]) != seen_objects.end()) {
-        total_score += get_priority(parts[i][0]);
+      if (seenObjects.find(parts[i]) != seenObjects.end()) {
+        totalScore += getPriority(parts[i][0]);
         break;
       }
     }
   }
 
-  return total_score;
+  return totalScore;
 }
 
-int count_badge_numbers(const vector<string>& lines) {
-  int total_score = 0;
+int countBadgeNumbers(const vector<string>& lines) {
+  int totalScore = 0;
 
   for (int i = 0; i < lines.size(); i += 3) {
-    std::set<std::string> part_1;
-    std::set<std::string> part_2;
-    std::set<std::string> part_3;
+    std::set<std::string> part1;
+    std::set<std::string> part2;
+    std::set<std::string> part3;
 
-    vector<string> parts_1 = split_string(lines[i], "");
-    part_1.insert(parts_1.begin(), parts_1.end());
+    vector<string> parts1 = split_string(lines[i], "");
+    part1.insert(parts1.begin(), parts1.end());
 
-    vector<string> parts_2 = split_string(lines[i + 1], "");
-    part_2.insert(parts_2.begin(), parts_2.end());
+    vector<string> parts2 = split_string(lines[i + 1], "");
+    part2.insert(parts2.begin(), parts2.end());
 
-    vector<string> parts_3 = split_string(lines[i + 2], "");
-    part_3.insert(parts_3.begin(), parts_3.end());
+    vector<string> parts3 = split_string(lines[i + 2], "");
+    part3.insert(parts3.begin(), parts3.end());
 
-    std::set<std::string> intersection_12;
-    std::set<std::string> intersection_123;
+    std::set<std::string> intersection12;
+    std::set<std::string> intersection123;
     // Compute intersection of part_1 and part_2
     std::set_intersection(
-        part_1.begin(), part_1.end(), part_2.begin(), part_2.end(),
-        std::inserter(intersection_12, intersection_12.begin()));
+        part1.begin(), part1.end(), part2.begin(), part2.end(),
+        std::inserter(intersection12, intersection12.begin()));
 
     // Compute intersection of the result with part_3
     std::set_intersection(
-        intersection_12.begin(), intersection_12.end(), part_3.begin(),
-        part_3.end(),
-        std::inserter(intersection_123, intersection_123.begin()));
+        intersection12.begin(), intersection12.end(), part3.begin(),
+        part3.end(), std::inserter(intersection123, intersection123.begin()));
 
-    total_score += get_priority((*intersection_123.begin())[0]);
+    totalScore += getPriority((*intersection123.begin())[0]);
   }
 
-  return total_score;
+  return totalScore;
 }
 
-void solve_3() {
+void solve3() {
   cout << "Day 3 solutions: " << endl;
   std::string filename = "D3/inp.txt";
-  const vector<string> lines = read_file(filename);
-  cout << "Part A: " << count_false_order(lines) << endl;
-  cout << "Part B: " << count_badge_numbers(lines) << endl;
+  const vector<string> LINES = read_file(filename);
+  cout << "Part A: " << countFalseOrder(LINES) << endl;
+  cout << "Part B: " << countBadgeNumbers(LINES) << endl;
 }

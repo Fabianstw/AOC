@@ -37,31 +37,31 @@ vector<string> readFileLines() {
   return lines;
 }
 
-int get_most_calories(const vector<string>& elves) {
-  int current_calories = 0;
-  int current_max = 0;
+int getMostCalories(const vector<string>& elves) {
+  int currentCalories = 0;
+  int currentMax = 0;
   for (const auto& elve : elves) {
     if (!elve.empty()) {
-      current_calories += stoi(elve);
+      currentCalories += stoi(elve);
     } else {
-      if (current_calories > current_max) {
-        current_max = current_calories;
+      if (currentCalories > currentMax) {
+        currentMax = currentCalories;
       }
-      current_calories = 0;
+      currentCalories = 0;
     }
   }
-  return current_max;
+  return currentMax;
 }
 
-int top_three_calories(const vector<string>& elves) {
-  int current_calories = 0;
+int topThreeCalories(const vector<string>& elves) {
+  int currentCalories = 0;
   vector<int> calories;
   for (const auto& elve : elves) {
     if (!elve.empty()) {
-      current_calories += stoi(elve);
+      currentCalories += stoi(elve);
     } else {
-      calories.push_back(current_calories);
-      current_calories = 0;
+      calories.push_back(currentCalories);
+      currentCalories = 0;
     }
   }
   // sort in decreasing order
@@ -71,8 +71,8 @@ int top_three_calories(const vector<string>& elves) {
 }
 
 void solve() {
-  const vector<string> lines = readFileLines();
+  const vector<string> LINES = readFileLines();
   cout << "Day 1 solutions:" << endl;
-  cout << get_most_calories(lines) << endl;
-  cout << top_three_calories(lines) << endl;
+  cout << getMostCalories(LINES) << endl;
+  cout << topThreeCalories(LINES) << endl;
 }

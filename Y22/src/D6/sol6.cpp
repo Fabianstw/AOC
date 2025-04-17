@@ -12,7 +12,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
-int marker(string line) {
+int marker(const string &line) {
   for (int i = 3; i < line.size(); i++) {
     if (line[i] != line[i - 1] && line[i] != line[i - 2] &&
         line[i] != line[i - 3] && line[i - 1] != line[i - 2] &&
@@ -23,12 +23,12 @@ int marker(string line) {
   return -1;
 }
 
-int improved_marker(string line) {
-  string last_14;
+int improvedMarker(const string &line) {
+  string last14;
   for (int i = 14; i < line.size(); i++) {
-    last_14 = line.substr(i - 14, 14);
+    last14 = line.substr(i - 14, 14);
     std::set<char> seen;
-    for (char c : last_14) {
+    for (char c : last14) {
       seen.insert(c);
     }
     if (seen.size() == 14) {
@@ -38,8 +38,8 @@ int improved_marker(string line) {
   return -1;
 }
 
-void solve_6() {
-  string input =
+void solve6() {
+  const string INPUT =
       "cmpmbppqmqsqzzrrswrrnqrnqqjzjvzzqvzvjvnnlclrrjhrrrnggmgwwdhhfttmmjrjzrzr"
       "hrbrgbrbsbjbcjjvpjjcvjvttfwffjtffqqqldqllhthhljhllfffbfbzbczzznmznnrrtgr"
       "gppdcppdfpfjjrggpjgjwgjwgghdggzzshzhrhttmhhdqhqsqgglhljjbggjhggfsfvfggrm"
@@ -98,6 +98,6 @@ void solve_6() {
       "cbffzcbllgzrzrnhdvqnvtndhcdslqbbhcdftlmnltmsmgfcgvmpbsljdbthjtqlfbmczznw"
       "cvfcsnftsnpzcwfqbfhjpswzfzfswfgtzplppsglsdncblddsmftmfdmmnsjjgg";
   cout << "Day 6 solutions:" << endl;
-  cout << "Part A: " << marker(input) << endl;
-  cout << "Part B: " << improved_marker(input) << endl;
+  cout << "Part A: " << marker(INPUT) << endl;
+  cout << "Part B: " << improvedMarker(INPUT) << endl;
 }

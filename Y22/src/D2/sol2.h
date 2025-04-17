@@ -5,6 +5,6 @@
 #ifndef Y22_SRC_D2_SOL2_H_
 #define Y22_SRC_D2_SOL2_H_
 
-void solve_2();
+void solve2();
 
 #endif  // Y22_SRC_D2_SOL2_H_

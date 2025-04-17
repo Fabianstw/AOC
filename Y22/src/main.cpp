@@ -10,6 +10,7 @@
 #include "D4/sol4.h"
 #include "D5/sol5.h"
 #include "D6/sol6.h"
+#include "D7/sol7.h"
 
 using std::cout;
 using std::endl;
@@ -19,14 +20,16 @@ int main() {
   cout << "-----------:-)-----------" << endl;
   solve();
   cout << "-----------:-)-----------" << endl;
-  solve_2();
+  solve2();
   cout << "-----------:-)-----------" << endl;
-  solve_3();
+  solve3();
   cout << "-----------:-)-----------" << endl;
-  solve_4();
+  solve4();
   cout << "-----------:-)-----------" << endl;
-  solve_5();
+  solve5();
   cout << "-----------:-)-----------" << endl;
-  solve_6();
+  solve6();
+  cout << "-----------:-)-----------" << endl;
+  solve7();
   return 0;
 }

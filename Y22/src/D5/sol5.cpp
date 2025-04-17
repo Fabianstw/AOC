@@ -61,7 +61,7 @@ string rearrange(const vector<string>& input) {
   return result;
 }
 
-string rearrange_2(const vector<string>& input) {
+string rearrange2(const vector<string>& input) {
   vector<vector<string>> stacks = {{"J", "H", "P", "M", "S", "F", "N", "V"},
                                    {"S", "R", "L", "M", "J", "D", "Q"},
                                    {"N", "Q", "D", "H", "C", "S", "W", "B"},
@@ -97,9 +97,9 @@ string rearrange_2(const vector<string>& input) {
   return result;
 }
 
-void solve_5() {
+void solve5() {
   cout << "Day 5 solutions:" << endl;
-  const vector<string> lines = read_file("D5/inp.txt");
-  cout << "Part A: " << rearrange(lines) << endl;
-  cout << "Part B: " << rearrange_2(lines) << endl;
+  const vector<string> LINES = read_file("D5/inp.txt");
+  cout << "Part A: " << rearrange(LINES) << endl;
+  cout << "Part B: " << rearrange2(LINES) << endl;
 }
