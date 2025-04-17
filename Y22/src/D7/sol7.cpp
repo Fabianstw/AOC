@@ -83,7 +83,7 @@ int deleteFolder(const vector<string>& lines, int threshold) {
 
 void solve7() {
   cout << "Day 7 solutions: " << endl;
-  const vector<string> LINES = read_file("D7/inp.txt");
+  const vector<string> LINES = readFile("D7/inp.txt");
   cout << "Part A: " << dirSizes(LINES, 100000) << endl;
   cout << "Part B: " << deleteFolder(LINES, 40000000) << endl;
 }

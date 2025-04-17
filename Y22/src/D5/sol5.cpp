@@ -44,7 +44,7 @@ string rearrange(const vector<string>& input) {
     if (line.empty() || line[0] == ' ' || line[0] == '[') {
       continue;
     }
-    vector<string> tokens = split_string(line, " ");
+    vector<string> tokens = splitString(line, " ");
     for (int i = 0; i < std::stoi(tokens[1]); i++) {
       string ele = stacks[std::stoi(tokens[3]) - 1].back();
       stacks[std::stoi(tokens[3]) - 1].pop_back();
@@ -76,7 +76,7 @@ string rearrange2(const vector<string>& input) {
     if (line.empty() || line[0] == ' ' || line[0] == '[') {
       continue;
     }
-    vector<string> tokens = split_string(line, " ");
+    vector<string> tokens = splitString(line, " ");
     vector<string> tmp = {};
     for (int i = 0; i < std::stoi(tokens[1]); i++) {
       string ele = stacks[std::stoi(tokens[3]) - 1].back();
@@ -99,7 +99,7 @@ string rearrange2(const vector<string>& input) {
 
 void solve5() {
   cout << "Day 5 solutions:" << endl;
-  const vector<string> LINES = read_file("D5/inp.txt");
+  const vector<string> LINES = readFile("D5/inp.txt");
   cout << "Part A: " << rearrange(LINES) << endl;
   cout << "Part B: " << rearrange2(LINES) << endl;
 }

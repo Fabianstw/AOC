@@ -32,7 +32,7 @@ int countFalseOrder(const vector<string>& lines) {
   int totalScore = 0;
 
   for (const auto& line : lines) {
-    vector<string> parts = split_string(line, "");
+    vector<string> parts = splitString(line, "");
     int mid = static_cast<int>(parts.size()) / 2;
     std::set<std::string> seenObjects;
     for (int i = 0; i < mid; i++) {
@@ -57,13 +57,13 @@ int countBadgeNumbers(const vector<string>& lines) {
     std::set<std::string> part2;
     std::set<std::string> part3;
 
-    vector<string> parts1 = split_string(lines[i], "");
+    vector<string> parts1 = splitString(lines[i], "");
     part1.insert(parts1.begin(), parts1.end());
 
-    vector<string> parts2 = split_string(lines[i + 1], "");
+    vector<string> parts2 = splitString(lines[i + 1], "");
     part2.insert(parts2.begin(), parts2.end());
 
-    vector<string> parts3 = split_string(lines[i + 2], "");
+    vector<string> parts3 = splitString(lines[i + 2], "");
     part3.insert(parts3.begin(), parts3.end());
 
     std::set<std::string> intersection12;
@@ -87,7 +87,7 @@ int countBadgeNumbers(const vector<string>& lines) {
 void solve3() {
   cout << "Day 3 solutions: " << endl;
   std::string filename = "D3/inp.txt";
-  const vector<string> LINES = read_file(filename);
+  const vector<string> LINES = readFile(filename);
   cout << "Part A: " << countFalseOrder(LINES) << endl;
   cout << "Part B: " << countBadgeNumbers(LINES) << endl;
 }
