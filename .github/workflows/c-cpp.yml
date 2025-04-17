@@ -21,6 +21,15 @@ jobs:
           cd Y22
           find src tests \( -name '*.cpp' -o -name '*.h' \) | xargs cpplint --linelength=80
 
+      # Add this step to your workflow file under the 'steps' section
+      - name: Install clang-tidy
+        run: sudo apt-get install -y clang-tidy
+
+      - name: Run clang-tidy
+        run: |
+          cd Y22
+          find src tests -name '*.cpp' | xargs clang-tidy -p build
+
       - name: Configure project with CMake
         run: |
           cd Y22
