@@ -11,7 +11,7 @@
 #include <vector>
 
 std::vector<std::string> splitString(const std::string& str,
-                                      const std::string& delimiter) {
+                                     const std::string& delimiter) {
   std::vector<std::string> tokens;
 
   if (delimiter.empty()) {

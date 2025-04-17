@@ -11,6 +11,7 @@
 #include "D5/sol5.h"
 #include "D6/sol6.h"
 #include "D7/sol7.h"
+#include "D8/sol8.h"
 
 using std::cout;
 using std::endl;
@@ -31,5 +32,7 @@ int main() {
   solve6();
   cout << "-----------:-)-----------" << endl;
   solve7();
+  cout << "-----------:-)-----------" << endl;
+  solve8();
   return 0;
 }
