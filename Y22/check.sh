@@ -5,7 +5,7 @@ echo "======================================================"
 
 # Reconfiguring CMake
 echo "🔁 Reconfiguring CMake..."
-cmake -S . -B cmake-build-debug > /dev/null 2>&1  # Suppress regular output
+cmake -S . -B cmake-build-debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON > /dev/null 2>&1
 
 # Build the project
 echo "🔨 Building the project..."
@@ -30,7 +30,7 @@ echo "======================================================"
 # Running clang-tidy
 echo "🔍 Running clang-tidy..."
 # shellcheck disable=SC2038
-find src tests -name '*.cpp' | xargs clang-tidy -p build
+find src tests -name '*.cpp' | xargs clang-tidy -p cmake-build-debug
 
 echo ""
 echo "======================================================"
