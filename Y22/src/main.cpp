@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "D1/sol1.h"
+#include "D10/sol10.h"
 #include "D2/sol2.h"
 #include "D3/sol3.h"
 #include "D4/sol4.h"
@@ -37,5 +38,7 @@ int main() {
   solve8();
   cout << "-----------:-)-----------" << endl;
   solve9();
+  cout << "-----------:-)-----------" << endl;
+  solve10();
   return 0;
 }
