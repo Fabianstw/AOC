@@ -18,6 +18,8 @@ add_executable(main
         src/D6/sol6.cpp
         src/D7/sol7.cpp
         src/D8/sol8.cpp
+        src/D9/sol9.cpp
+        src/D9/sol9.h
 )
 
 include(FetchContent)
