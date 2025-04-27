@@ -4,6 +4,7 @@
 
 #include "D11/sol11.h"
 
+#include <algorithm>
 #include <iostream>
 #include <optional>
 #include <string>

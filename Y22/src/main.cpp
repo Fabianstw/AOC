@@ -8,6 +8,7 @@
 #include "D1/sol1.h"
 #include "D10/sol10.h"
 #include "D11/sol11.h"
+#include "D12/sol12.h"
 #include "D2/sol2.h"
 #include "D3/sol3.h"
 #include "D4/sol4.h"
@@ -46,5 +47,7 @@ int main() {
   solve10();
   cout << SEP << endl;
   solve11();
+  cout << SEP << endl;
+  solve12();
   return 0;
 }
